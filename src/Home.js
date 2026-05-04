@@ -10,7 +10,7 @@ function Home() {
 
   useEffect(() => {
       // axios.get("https://hrkinfra.onrender.com/properties/")
-      axios.get("https://hrkinfra.onrender.com/")
+      axios.get(`${process.env.REACT_APP_API_URL}/properties/`)
       .then(res => {
         setProperties(res.data);
         setLoading(false);
