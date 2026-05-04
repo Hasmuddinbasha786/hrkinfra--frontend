@@ -120,7 +120,7 @@ function Home() {
                 <h3 style={{ margin: "10px 0" }}>{p.title}</h3>
 
                 <img
-                  src={p.image}
+                  src={`https://hrkinfra.onrender.com${p.image}`}
                   alt="property"
                   style={{
                     width: "100%",
