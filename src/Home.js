@@ -33,7 +33,8 @@ function Home() {
     return matchesLocation && matchesPrice;
   });
 
-  if (loading) return <p>Loading...</p>;
+  // loading
+  if (loading) return <p>Loading properties...</p>;
 
   return (
     <div>
@@ -119,8 +120,13 @@ function Home() {
               >
                 <h3 style={{ margin: "10px 0" }}>{p.title}</h3>
 
+              {/* image */}
                 <img
-                  src={`https://hrkinfra.onrender.com${p.image}`}
+                  src={
+                    p.image?.startsWith("http")
+                      ? p.image
+                      : `https://hrkinfra.onrender.com${p.image}`
+                  }
                   alt="property"
                   style={{
                     width: "100%",
