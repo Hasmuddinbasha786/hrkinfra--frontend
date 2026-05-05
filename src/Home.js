@@ -122,11 +122,11 @@ function Home() {
 
               {/* image */}
                 <img
-                  src={`https://hrkinfra.onrender.com${p.image}`} 
-                 alt="property"
-                  onError={(e) => {
-                    e.target.src = "https://via.placeholder.com/300x150";
-                  }}
+                  src={
+                    p.image?.startsWith("http")
+                      ? p.image
+                      : `https://hrkinfra.onrender.com${p.image}`
+                  }
                   alt="property"
                   style={{
                     width: "100%",
