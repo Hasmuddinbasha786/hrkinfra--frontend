@@ -119,14 +119,10 @@ function Home() {
                 }}
               >
                 <h3 style={{ margin: "10px 0" }}>{p.title}</h3>
-
-              {/* image */}
+                
+                {/* Image */}
                 <img
-                  src={
-                    p.image?.startsWith("http")
-                      ? p.image
-                      : `https://hrkinfra.onrender.com${p.image}`
-                  }
+                  src={p.image || "https://via.placeholder.com/300x150"}
                   alt="property"
                   style={{
                     width: "100%",
